@@ -1,0 +1,18 @@
+.upper-bar {
+    border: 1px solid gray;
+    background-color: lightyellow;
+    height: 90px
+}
+
+.upper-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    background-color: lightyellow;
+}
+
+.upper-bar img {
+    width: 80px;
+    height: auto;
+}

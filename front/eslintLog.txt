@@ -1,0 +1,40 @@
+
+> studi-exam-frontend-react@0.1.0 lint
+> eslint src/**/*.js
+
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/LowerZoneComponents/home.js
+  1:8  warning  'FrenchEnglish' is defined but never used  no-unused-vars
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/LowerZoneComponents/qrcode.js
+  1:8  warning  'FrenchEnglish' is defined but never used  no-unused-vars
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/LowerZoneComponents/tickets.js
+  1:8  warning  'FrenchEnglish' is defined but never used  no-unused-vars
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/components/LoginBar.js
+  13:21  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  16:21  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/components/LowerZone.js
+  5:13  warning  'dictLanguage' is assigned a value but never used  no-unused-vars
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/components/NavigationBar.js
+  26:33  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/components/PageSwitcher.js
+  11:13  warning  'dictLanguage' is assigned a value but never used  no-unused-vars
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/components/commonBadge.js
+  4:10  warning  'CommonBadge' is defined but never used            no-unused-vars
+  5:13  warning  'dictLanguage' is assigned a value but never used  no-unused-vars
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/components/pageAfterChangeLanguage.js
+  10:13  warning  'dictLanguage' is assigned a value but never used                                                                                                                                                                                                                no-unused-vars
+  10:30  error    React Hook "useContext" is called in function "pageAfterChangeLanguage" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"  react-hooks/rules-of-hooks
+
+/Users/fabienduval/WebstormProjects/studi-exam-frontend-react/src/constants/Translations.js
+  98:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+✖ 13 problems (1 error, 12 warnings)
+
