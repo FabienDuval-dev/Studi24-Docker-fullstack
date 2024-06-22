@@ -1,0 +1,1 @@
+web: cd studiExam2024-back-end && mvn clean install && java -jar target/*.jar

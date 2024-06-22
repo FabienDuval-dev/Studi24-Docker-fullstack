@@ -1,21 +1,31 @@
-# Build Frontend
-FROM node:14 AS frontend-build
+# Utiliser une image de base pour Node.js pour le frontend
+FROM node:14 AS frontend
+
+# Définir le répertoire de travail pour le frontend
 WORKDIR /app/front
+
+# Copier le package.json et installer les dépendances du frontend
 COPY front/package*.json ./
 RUN npm install
+
+# Copier le reste du code du frontend et le construire
 COPY front/ ./
 RUN npm run build
 
-# Build Backend
-FROM eclipse-temurin:17-jre-focal AS backend-build
-WORKDIR /app/back
-COPY Studi2024-Back-v7/target/studi-exam-2024-back-end-SpringBoot-0.0.1-SNAPSHOT.jar ./app.jar
-COPY --from=frontend-build /app/front/build ./public
+# Utiliser une image de base pour Java pour le backend
+FROM eclipse-temurin:17-jre-focal AS backend
 
-# Run Backend
-FROM eclipse-temurin:17-jre-focal
+# Définir le répertoire de travail pour le backend
 WORKDIR /app
-COPY --from=backend-build /app/back/app.jar ./app.jar
-COPY --from=backend-build /app/back/public ./public
+
+# Copier le fichier JAR du backend depuis votre machine hôte vers l'image Docker
+COPY target/studi-exam-2024-back-end-SpringBoot-0.0.1-SNAPSHOT.jar /app/app.jar
+
+# Copier le frontend build dans le backend resources
+COPY --from=frontend /app/front/build /app/public
+
+# Exposer le port que votre backend utilise
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+
+# Démarrer l'application backend avec le profil 'docker'
+CMD ["java", "-jar", "/app/app.jar", "--spring.profiles.active=docker"]
