@@ -1,3 +1,5 @@
 build:
   docker:
     web: Dockerfile
+  config:
+    MAVEN_CUSTOM_OPTS: "-f Studi2024-Back-v7/pom.xml"
