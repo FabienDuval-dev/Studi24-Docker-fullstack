@@ -19,6 +19,12 @@
         <spring-cloud.version>2023.0.1</spring-cloud.version>
     </properties>
     <dependencies>
+        <!-- H2 Database for Integration Tests -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!-- Particular dependencies -->
         <dependency>
             <groupId>io.github.cdimascio</groupId>
@@ -40,12 +46,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>3.2.4</version> <!-- Ajouter la version ici -->
         </dependency>
 
         <!-- PostgreSQL JDBC driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+            <version>42.6.0</version> <!-- Ajouter la version ici -->
             <scope>runtime</scope>
         </dependency>
 
@@ -97,8 +105,22 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>21.0.1</version> <!-- Updated version -->
+            <version>24.0.1</version> <!-- Updated version -->
             <scope>compile</scope>
+        </dependency>
+        <!-- autres dépendances -->
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -110,6 +132,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

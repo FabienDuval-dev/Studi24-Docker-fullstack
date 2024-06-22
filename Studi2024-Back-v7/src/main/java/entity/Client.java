@@ -1,72 +1,37 @@
 package entity;
 
-import jakarta.persistence.*;
-
-import java.util.List;
-
-import entity.Ticket;
-import entity.Administrator;
-import entity.Key;
-import entity.Client;
-import org.jetbrains.annotations.NotNull;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Client {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToMany
-    private List<Administrator> listOfAdministrators;
-
-    @OneToOne
-    private Key key1;
-
-    @OneToMany
-    private List<Ticket> listOfTickets;
-
-
     private String name;
-    private String surname;
     private String email;
     private String password;
-    public boolean isLogged;
-    private long moneyInBasket;
+    private boolean isLogged;
 
-
+    // Constructeurs
     public Client() {
     }
 
-    public Client(String name, String surname, String email, String password) {
+    public Client(String name, String email) {
         this.name = name;
-        this.surname = surname;
         this.email = email;
-        this.password = password;
-        this.moneyInBasket = 0;
     }
 
-    public Client(String name, String surname, String email, String password, Key key1) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.password = password;
-        this.key1 = key1;
-        this.moneyInBasket = 0;
-    }
-
-    // Definition of the setters and the getters
-
+    // Getters et Setters
     public Long getId() {
         return id;
     }
 
-    public List<Ticket> getTicket() {
-        return this.listOfTickets;
-    }
-
-    public void setTicket(Ticket ticket) {
-        listOfTickets.add(ticket);
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -75,14 +40,6 @@ public class Client {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getEmail() {
@@ -101,50 +58,45 @@ public class Client {
         this.password = password;
     }
 
-    // Other shaped methods
-
-
-    public Key getKey1() {
-        return this.key1;
+    public boolean isLogged() {
+        return isLogged;
     }
 
-    public Client createAccount() {
-        return new Client();
+    public void setLogged(boolean logged) {
+        isLogged = logged;
     }
 
-    public void login() {
-        // Permits to the client to login
-    }
-
-    public void logout() {
-        // Permits to the client to logout
-    }
-
-    public void changePassword(String Password) {
-        // Permits to the client to change his password
+    // Méthodes spécifiques
+    public void changePassword(String newPassword) {
+        this.password = newPassword;
     }
 
     public void deleteAccount() {
-        // Permits to the client to delete his account
+        // Logique de suppression de compte
     }
 
-    public void payTicket(Ticket ticket) {
-        // Permits to the client to pay his ticket
+    public void setMoneyInBasket(int money) {
+        // Logique de mise à jour du montant dans le panier
     }
 
-// setMoneyInBasket and getMoneyInBasket
-
-    public void setMoneyInBasket(long moneyInBasket) {
-        this.moneyInBasket = moneyInBasket;
+    public void addMoneyInBasket(int money) {
+        // Logique d'ajout de montant dans le panier
     }
 
-    public long getMoneyInBasket() {
-        return moneyInBasket;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return id.equals(client.id) &&
+                isLogged == client.isLogged &&
+                name.equals(client.name) &&
+                email.equals(client.email) &&
+                password.equals(client.password);
     }
 
-    public void addMoneyInBasket(Integer thePriceOfTheTicket) {
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, email, password, isLogged);
     }
 }
-
-
-

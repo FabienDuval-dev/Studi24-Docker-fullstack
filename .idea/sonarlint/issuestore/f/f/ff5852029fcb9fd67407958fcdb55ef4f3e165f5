@@ -1,0 +1,15 @@
+
+U
+java:S1144^"?Remove this unused private "createAccountAdministrator" method.(ÕÿŒç
+S
+java:S1144c"8Remove this unused private "createAccountClient" method.(«ÏÔòùÿÿÿÿ
+L
+java:S1144h"1Remove this unused private "deleteClient" method.(¡Æ‰ëþÿÿÿÿ
+M
+java:S1144l"7Remove this unused private "deleteClientTicket" method.(‘¶Ë¶
+T
+java:S1144t"9Remove this unused private "numberRemainedPlaces" method.(ûºŸ÷ùÿÿÿÿ
+H
+java:S1172h"-Remove this unused method parameter "client".(¡Æ‰ëþÿÿÿÿ
+C
+java:S1172l"-Remove this unused method parameter "ticket".(‘¶Ë¶
