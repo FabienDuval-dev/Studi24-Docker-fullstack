@@ -1,1 +1,1 @@
-web: cd backend && java -Dserver.port=$PORT -jar target/*.jar
+web: cd Studi2024-Back-v7 && java -Dserver.port=$PORT -jar target/*.jar
