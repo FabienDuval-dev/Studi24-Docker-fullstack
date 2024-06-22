@@ -1,1 +1,1 @@
-web: cd studiExam2024-back-end && mvn clean install && java -jar target/*.jar
+web: java -jar target/studi-exam-2024-back-end-SpringBoot-0.0.1-SNAPSHOT.jar
