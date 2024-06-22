@@ -15,3 +15,7 @@ r
 BStudi2024-Back-v7/src/main/resources/application-heroku.properties,e/1/e1a4c147acf75427bb9bc2eb6fd4a4c6edaabd7b
 8
 Procfile,b/c/bc3c68e880d1a01632bce79f69dd1387c7ba9c54
+L
+Studi2024-Back-v7/.gitignore,7/a/7af51d956a8c4cb9c18b938713fa4673095c6d5f
+D
+testmaven/.gitignore,5/2/5238ab9e690e01c1df74928fbcc30935587f26fa
