@@ -19,7 +19,7 @@ FROM eclipse-temurin:17-jre-focal AS backend
 WORKDIR /app
 
 # Copier le fichier JAR du backend depuis votre machine hôte vers l'image Docker
-COPY target/studi-exam-2024-back-end-SpringBoot-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY Studi2024-Back-v7/target/studi-exam-2024-back-end-SpringBoot-0.0.1-SNAPSHOT.jar /app/app.jar
 
 # Copier le frontend build dans le backend resources
 COPY --from=frontend /app/front/build /app/public
