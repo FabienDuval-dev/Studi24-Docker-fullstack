@@ -19,3 +19,7 @@ L
 Studi2024-Back-v7/.gitignore,7/a/7af51d956a8c4cb9c18b938713fa4673095c6d5f
 D
 testmaven/.gitignore,5/2/5238ab9e690e01c1df74928fbcc30935587f26fa
+½
+ŒStudi2024-Back-v7/target/surefire-reports/TEST-org.example.studiexam2024backendspringboot.studiExam2024BackEndSpringBootApplicationTests.xml,d/3/d3ea0bdc7f8ef9a04e72bcdd183caeb2b1ebcd95
+¸
+‡Studi2024-Back-v7/target/surefire-reports/org.example.studiexam2024backendspringboot.studiExam2024BackEndSpringBootApplicationTests.txt,0/6/06c0423f53216f3f042ff38703b4a30cca40fbc1
