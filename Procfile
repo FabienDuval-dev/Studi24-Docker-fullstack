@@ -1,1 +1,1 @@
-web: java -jar target/studi-exam-2024-back-end-SpringBoot-0.0.1-SNAPSHOT.jar
+web: cd backend && java -Dserver.port=$PORT -jar target/*.jar
