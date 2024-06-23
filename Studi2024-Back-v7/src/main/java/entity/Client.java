@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import java.util.Objects;
+
 @Entity
 public class Client {
 
@@ -12,12 +14,33 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String surname;
     private String email;
     private String password;
-    private boolean isLogged;
+    private Key key1;
+    public boolean isLogged;
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setKey1(Key key1) {
+        this.key1 = key1;
+    }
 
     // Constructeurs
     public Client() {
+    }
+
+    public Client(String name, String surname, String email, String password) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
     }
 
     public Client(String name, String email) {
@@ -83,20 +106,19 @@ public class Client {
         // Logique d'ajout de montant dans le panier
     }
 
+    public Key getKey1() {
+        return this.key1;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Client client = (Client) o;
-        return id.equals(client.id) &&
-                isLogged == client.isLogged &&
-                name.equals(client.name) &&
-                email.equals(client.email) &&
-                password.equals(client.password);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, email, password, isLogged);
+        return id == client.id &&
+                Objects.equals(name, client.name) &&
+                Objects.equals(surname, client.surname) &&
+                Objects.equals(email, client.email) &&
+                (password == null ? client.password == null : password.equals(client.password));
     }
 }
