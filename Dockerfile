@@ -13,7 +13,7 @@ COPY front/ ./
 RUN npm run build
 
 # Utiliser une image de base pour Maven pour construire le backend
-FROM maven:3.8.1-openjdk-11-slim AS build
+FROM maven:3.8.1-openjdk-17-slim AS build
 
 # Définir le répertoire de travail pour le build
 WORKDIR /app
