@@ -53,3 +53,9 @@ R
 "front/src/modeledObjects/Client.js,9/a/9a20ba9f28b6d9755c43f4e2d95e7a920293aa10
 K
 .github/workflows/build.yml,f/e/fe77d5d1439f26e353a42bbd38dece2467ff6558
+Y
+).github/workflows/qodana_code_quality.yml,4/f/4f751ec70a5e7dcf5d05ba8965348b627e7b3e80
+M
+.github/workflows/qodana.yaml,f/c/fcb6b674a55341a0a6d48ffc305d9afcd5e9bf3a
+M
+Studi2024-Back-v7/qodana.yaml,1/a/1a87200be0ac65b00a0a4d97e9c9e25072872b92
