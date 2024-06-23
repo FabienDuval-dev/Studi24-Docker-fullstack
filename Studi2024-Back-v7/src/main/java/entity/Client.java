@@ -110,7 +110,7 @@ public class Client {
         return this.key1;
     }
 
-    @Override
+  /*  @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -120,5 +120,5 @@ public class Client {
                 Objects.equals(surname, client.surname) &&
                 Objects.equals(email, client.email) &&
                 (password == null ? client.password == null : password.equals(client.password));
-    }
+    } */
 }
