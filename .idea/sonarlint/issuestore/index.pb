@@ -51,3 +51,5 @@ A
 testmaven/pom.xml,c/b/cb4033473b547d58efc8bc0a976d3fa153e393f9
 R
 "front/src/modeledObjects/Client.js,9/a/9a20ba9f28b6d9755c43f4e2d95e7a920293aa10
+K
+.github/workflows/build.yml,f/e/fe77d5d1439f26e353a42bbd38dece2467ff6558
